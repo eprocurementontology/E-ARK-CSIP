@@ -84,3 +84,13 @@ An overview of the repository structure and it's relationship to the website. Th
     |-- DILCISVocabularies.rng
     |-- DILCISVocabulariesIP.xml
 ```
+
+## Commenting on the specification
+
+### GitHub Issues
+
+## Contributing to the specification
+
+### GitHub Pull Requests
+
+### Pull Request review process
