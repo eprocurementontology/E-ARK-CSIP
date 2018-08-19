@@ -85,12 +85,28 @@ An overview of the repository structure and it's relationship to the website. Th
     |-- DILCISVocabulariesIP.xml
 ```
 
-## Commenting on the specification
+## Contributing the specification process
+We use [GitHub](https://github.com/) to organise, assign and review the work of the specification group. This means that to participate you'll need to sign up to GitHub and get a [GitHub id](https://github.com/join).
 
-### GitHub Issues
+### GitHub tools and references
+This is intended as a guide to GitHub, there are plenty of good online resources. [GitHub's official guides](https://guides.github.com/) are the best place to start. Here's a brief overview of the most important concepts and the resources available.
 
-## Contributing to the specification
+#### Writing on GitHub
+Most of your interaction with GitHub itself will be via it's online forms, which are generally simple. Most forms provide a free text box for comments and/or a description. While plain text is fine it lacks even rudimentary formatting. Most places where you can enter free text on GitHub support [Markdown](https://daringfireball.net/projects/markdown/), specifically [GitHub flavoured Markdown](https://guides.github.com/features/mastering-markdown/). This document is also written in Markdown.
+
+#### Providing Feedback
+The simplest way of contributing is to provide feedback on the specification through [GitHub Issues].
+
+### Commenting on the specification
+If you simply want to
+
+#### GitHub Issues
+
+### Contributing to the specification
 
 ### GitHub Pull Requests
 
 ### Pull Request review process
+
+### I have no GitHub Id
+Any ideas? .....
