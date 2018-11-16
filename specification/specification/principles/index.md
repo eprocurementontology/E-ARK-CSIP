@@ -2,15 +2,15 @@
 title: Principles for interoperable Information Packages
 ---
 # 3. Principles for interoperable Information Packages
-At the heart of any standardisation activity has to be a clear understanding of the needs and aims which have to be addressed. This is also the goal of this Section, which presents a series of high level principles to guide the technical details delivered in Part II of this specification.
+At the heart of any standardisation activity has to be a clear understanding of the needs and aims to be addressed. This is the goal of this Section which presents a series of high level principles to be applied to the detailed requirements delivered in Part II of this specification.
 
-Most of the principles are driven by the aim of interoperability –Information Packages shall be easy to exchange, identify, validate and (re)use with a wide variety of software tools and systems.
+Most of the principles are motivated by the aim of interoperability, that is to say Information Packages should be easy to exchange, identify, validate and (re)use by a wide variety of software tools and systems.
 
-Another crucial factor to take into account is long-term sustainability. Practical technical and semantic interoperability is possible only when a certain set of technologies have been agreed upon and implemented. However, any technology will become outdated sooner or later and previously agreed-upon approaches have to be updated to accommodate new, better and more efficient technologies and standards. Because of this, the developers of this Common Specification for Information Packages have reused, as much as possible, existing powerful, standardised and well-established best practices for the technical implementation of an Information Package (Part II of this document). This does not mean that the technical implementation details will not need to be changed in future, only that the need will arise later rather than sooner. To achieve long-term sustainability of the Common Specification for Information Packages, we present below a set of generic principles which must be followed when updating any specific implementation details at any point in time.
+Another crucial factor is long-term sustainability. Technical and semantic interoperability is possible only when a specific set of technologies have been agreed upon, implemented and tested. However, any technology will eventually become obsolete meaning previously agreed approaches have to be updated to accommodate emerging technologies and standards. Because of this, the developers of this Common Specification for Information Packages have endeavoured to reuse existing powerful, standardised and well-established best practices for the implementation of an Information Package (Part II of this document). This does not mean that the technical implementation details will not be subject to change in the future, but we anticipate that this will not happen in the immediate future. To achieve long-term sustainability of the Common Specification for Information Packages, we present a set of principles which must be followed when updating any specific implementation details.
 
-The principles present a conceptual view of an Information Package, including an overall IP data model, and use of data and metadata. An implementation of this conceptual view is presented later, in Part II of this document.
+The principles present a conceptual view of an Information Package, including a data model, and the use of data and metadata. An implementation that adheres to these principles is presented in Part II of this document.
 
-Each principle has a sequential number and a short description. The description includes always a MoSCoW (MUST/MUST NOT, SHOULD/SHOULD NOT, COULD, WOULD) prioritisation statement.  The short description of each principle is followed by a rationale which describes the reason and background for the principle.
+Each principle has a number and a short description. The descriptions include a MoSCoW (MUST/MUST NOT, SHOULD/SHOULD NOT, COULD, WOULD) statement. The  description includes a rationale documenting the background and motivation for the principle.
 
 ## 3.1. General principles
 
@@ -98,53 +98,53 @@ The components of a CS IP Information Package are explained in more detail in th
 At the highest level each Information Package can be divided into data and metadata. In order to minimise the effort needed for the identification and validation of both, and to simplify long-term preservation actions it is reasonable to clearly separate data and metadata. This allows, for example, ingest tools to streamline and separate metadata identification and validation tasks, and file format identification and normalisation. Throughout long-term preservation such a separation allows also The most crucial (MUST) aspect of such separation is that it is achieved on the logical level of the Information Package.
 
 ### Principle 3.2:
-*A Common Specification Information Package SHOULD be built in such a way that its data and metadata can be physically separated from one another.*
+*A Common Specification Information Package SHOULD be structured so that data and metadata are separate from each other.*
 
 In addition to the logical separation of components it is beneficial to have data and metadata physically separated (i.e. formatted as individual computer files or clearly separated bitstreams). This allows digital preservation tools and systems to update respective data or metadata portions of an Information Package without endangering the integrity of the whole package.
 
 ### Principle 3.3:
-*The structure of the Information Package SHOULD allow for the separation of different types of metadata*
+*The structure of an Information Package SHOULD allow for the separation of different types of metadata*
 
 In addition to the previous principle it is recommended to explicitly divide metadata into more specific components. While the definitions of metadata types vary a lot between implementations it is our recommendation to divide metadata logically and physically at least into descriptive and preservation metadata.
 
 ### Principle 3.4:
-*The structure of the Information Package MUST allow for the separation of data and metadata representations.*
+*The structure of an Information Package MUST allow for the separation of data and/or metadata representations.*
 
-The concept of representations is one of the fundamental building blocks in digital preservation. As technologies evolve and get obsolete, data and metadata is constantly updated in order to ensure long-term accessibility, therefore creating new versions or representations of the data and metadata.
+The concept of representations is one of the fundamental building blocks in digital preservation. As technologies become obsolete, data and metadata is updated to ensure long-term accessibility, creating new versions and/or representations of the data and metadata as necessary.
 
-Expressing representations within the logical and physical structure of an Information Package helps institutions to explicitly understand the various states of the information throughout its lifecycle, therefore improving also the ease of long-term management and reuse of the information.
+Expressing representations within an Information Package helps institutions to understand the various states of the information throughout its lifecycle, therefore facilitating long-term management and reuse of the information.
 
 ### Principle 3.5:
-*The structure of a CS IP Information Package MUST explicitly define the possibilities for adding additional components into the Information Package.*
+*The structure of an Information Package MUST be freely extensible, allowing for additional components within the Information Package.*
 
-In addition to data and metadata, institutions might have the need to include additional information in an Information Package. For example, implementers might decide that XML Schemas about metadata structures and additional binary documentation about the original IT environment have to be added to the package.
-
-If this is the case, the CS IP Information Package MUST NOT limit which components can constitute an Information Package, and MUST offer clearly defined extension points for the inclusion of these additional components into the Information Package. At the same time these extension points MUST be defined in a way which does not interfere with other components (i.e. the extension points MUST be clearly separated from other components of an Information Package).
+In addition to data and metadata, institutions may wish to include additional components within an Information Package. The IP shouldn't restrict which components can constitute an Information Package. It must offer well defined extension points for the inclusion of additional components, which shouldn't affect other components (i.e. the extension points must be clearly separated from other components within the IP).
 
 ### Principle 3.6:
-*A CS IP Information Package MUST follow a common conceptual structure regardless of its technical implementation.*
+*An Information Package MUST follow a common conceptual structure regardless of its technical implementation.*
 
-Based on principles 3.1 – 3.4 we now present a common structure for any CS IP Information Package ([Figure 7](#fig7)).
+Based on principles 3.1 – 3.5 we now present a common structure for any CS IP Information Package ([Figure 7](#fig7)).
 
 <a name="fig7"></a>
 ![Conceptual Structure](fig_7_cs_con_struct.png "Conceptual structure of the Common Specification")
 
 **Figure 7:** Conceptual structure of the Common Specification
 
-Following Principle 3.4 the structure separates explicitly the representations of data and metadata into a separate structural component.
+Principle 3.1 states that the package must include a high-level structural component for metadata. Representations must internally separate data and metadata. Note that the CSIP does not mandate that both data and metadata must be present in all representations.
 
-Following Principle 3.1 the package MUST include a high-level structural component for metadata which includes at least relevant metadata for the whole package. In addition the representations MUST internally separate between data and metadata (though note that the CS IP does not mandate that both data and metadata must be available in all representations).
+Principle 3.2 recommends the separation of data and metadata.
 
-In addition we highly recommend dividing the metadata portion of the Information Package to separate different types of metadata (SHOULD Principle 3.3).
+Principle 3.3 recommends dividing the metadata in an Information Package by category.
 
-Following Principle 3.5 repositories and their users have the possibility to add any additional components (as an example for schemas and binary support documentation) either as extensions to the whole Information Package or into a specific representation.
+Principle 3.4 separates the representations of data and metadata into separate components.
 
-This common structure MUST be followed throughout all specific physical implementations of the CS IP.
+Principle 3.5 allows repositories and their users the possibility of adding additional components, e.g. schemas and supplementary documentation.
 
 ### Principle 3.7:
-*A CS IP Information Package MUST be implemented by one and only one implementation at any point in time.*
+**TODO: Review and remove?**
 
-The conceptual structure presented above can be implemented in various ways – for example the components might be defined by accompanying package metadata or explicitly through a physical structure. However, it is not reasonable to have multiple (competing) implementations available at once as this would lead to unnecessary complexity in developing interoperable tools for creating, processing and managing Information Packages.
+*An Information Package MUST be expressed using only a single CSIP Implementation.*
+
+The conceptual structure can be implemented in various ways – for example the components might be defined by accompanying package metadata or explicitly through a physical structure. However, it is not reasonable to have multiple implementations available at once as this would lead to unnecessary complexity in developing interoperable tools for creating, processing and managing Information Packages.
 
 At the same time it is clear that any given technical implementation will become obsolete in time, for example as new transfer methods and storage solutions emerge. As such this requirement does not prohibit the take-up of any emerging logical of physical technical solutions but merely requires to have one and only one of these to be implemented at any given point in time.
 
@@ -153,28 +153,26 @@ At the time being, the CS IP  mandates a fixed physical folder structure (see Se
 ## 3.4 Information Package Metadata
 
 ### Principle 4.1:
-*Metadata in a CS IP Information Package MUST be based on standards.*
+*Metadata in an Information Package MUST be based on standards.*
 
 In order to exchange, validate, process and reuse Information Packages in an interoperable and automated way we need to standardise how crucial metadata are presented in the package. “Crucial metadata”, is defined in this specification as the core information about how the package content has been created and managed (administrative and preservation metadata), explicit descriptions about of the structure of the package (structural metadata) and the technical details of the data themselves (technical metadata).
 
 In order to ensure that these metadata are understood and implemented in a common and interoperable way in any Information Package, the use of established and widely used metadata standards is highly recommended. In the current implementation a large proportion of such metadata is covered by the widely used METS and PREMIS standards (see Section 5).
 
 ### Principle 4.2:
-*Metadata in a CS IP Information Package MUST allow for unambiguous use.*
+*Metadata standards used in an Information Package MUST be used consistently.*
 
 Many metadata standards support multiple options for describing specific details of an Information Package. However, such interpretation possibilities can also lead to different implementations and ultimately to the loss of interoperability.
 
 To overcome this risk the CS IP requires that, while developing a specific implementation, the chosen metadata standard MUST be reviewed in regard to potential ambiguity. If needed, the selected metadata standard MUST be further refined to meet the needs of interoperability and automation.
 
 ### Principle 4.3:
-*A CS IP Information Package MUST NOT restrict the addition of any additional metadata.*
+*An Information Package MUST allow the addition of supplementary metadata.*
 
-Previous principles state the importance of highly controlled administrative, preservation, structural and technical metadata for interoperability purposes. At the same time the opposite applies for other types of metadata, most prominently for resource discovery (also called descriptive) or Content Information Type specific technical and structural metadata. In order to not limit the widespread adoption of the CS IP it has to be possible for any implementer to add any metadata next to the mandatory metadata components needed for package level automation and interoperability.
+The previous principles state the importance of strictly controlled administrative, preservation, structural and technical metadata for interoperability. This applies for other types of metadata, most prominently for resource discovery or specific technical and structural metadata. To encourage widespread adoption of the CSIP it must be possible for implementers to add arbitary metadata alongside the mandatory metadata components.
 
-In case organisations need to prescribe further details about descriptive or Content Information Type specific metadata for a deeper level of interoperability it is possible to use the mechanism of Content Information Type Specifications described above.
-
-To summarise the requirements above from a more technical perspective, the CS IP foresees a modular approach towards Information Package metadata:
+To summarise the requirements above from a more technical perspective, the CS IP adopts a modular approach towards Information Package metadata:
 
 - All Information Packages share a common core of metadata which allows for the common development of high-level package creation, validation, identification and reuse tools;
 
-- The rest of the metadata in the Information Package might follow additional agreements which have been made in order to develop specific tools such as, for example, tools to manage archival descriptions in EAD, or for specific Content Information Types like relational databases in the SIARD2 format.
+- Further metadata in the Information Package might follow additional conventions. Metadata transferred to support specific tools, for example, tools to manage archival descriptions in EAD, or for specific Content Information Types like relational databases in the SIARD2 format.
